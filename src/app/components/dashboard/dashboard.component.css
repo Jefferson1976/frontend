@@ -1,0 +1,9 @@
+h2 {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.divTable {
+  display: flex;
+  padding: 10px;
+}

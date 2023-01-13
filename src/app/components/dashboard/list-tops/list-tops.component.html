@@ -1,0 +1,16 @@
+<h2>Top 3 studios with winners</h2>
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr class="bg-light">
+      <th>Name</th>
+      <th>Win Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let win of winnersTop3">
+      <td style="width: 50%;">{{ win.name }}</td>
+      <td>{{ win.winCount }}</td>
+    </tr>
+  </tbody>
+</table>
+

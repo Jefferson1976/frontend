@@ -1,0 +1,19 @@
+<h2 style="font-weight: normal;">Maximum</h2>
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr class="bg-light">
+      <th>Producer</th>
+      <th>Interval</th>
+      <th>Previous Year</th>
+      <th>Following Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="winnerMaximunInteval">
+      <td style="width: 25%;">{{ winnerMaximunInteval.producer }}</td>
+      <td style="width: 25%;">{{ winnerMaximunInteval.interval }}</td>
+      <td style="width: 25%;">{{ winnerMaximunInteval.previousWin }}</td>
+      <td style="width: 25%;">{{ winnerMaximunInteval.followingWin }}</td>
+    </tr>
+  </tbody>
+</table>

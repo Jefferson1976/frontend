@@ -1,0 +1,31 @@
+header {
+  height: 50px;
+  width: 100%;
+  font-size: 36px;
+  text-align: left;
+  padding-left: 10px;
+  background-color: black;
+  color:aliceblue;
+}
+
+nav {
+  float: left;
+  width: 10%;
+  height: 95vh;
+  background-color: rgb(236, 231, 231);
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  width: 90%;
+  padding: 20px;
+  background-color: #f1f1f1;
+  height: 95vh;
+  flex-direction: row;
+}

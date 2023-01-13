@@ -1,0 +1,15 @@
+<div class="btn-group">
+  <label class="fa fa-angle-double-left fa-2x btn-outline-primary" (click)="primeira()">&nbsp;</label>
+  <label class="fa fa-angle-left fa-2x btn-outline-primary" (click)="anterior()">&nbsp;</label>
+  <label *ngIf="flag3pontosDireita" class="btn  btn-outline-primary">...</label>
+  <label
+    *ngFor="let botao of listaBotoes"
+    (click)="clickBotao(botao)"
+    class="btn btn-outline-primary"
+    [class.active]="botao?.selecionada">
+      {{ botao?.numero }}
+  </label>
+  <label *ngIf="flag3pontosEsquerda" class="btn  btn-outline-primary">...</label>
+  &nbsp;&nbsp;<label class="fa fa-angle-right fa-2x btn-outline-primary" (click)="proxima()"></label>
+  &nbsp;&nbsp;<label class="fa fa-angle-double-right fa-2x btn-outline-primary" (click)="ultima()"></label>
+</div>

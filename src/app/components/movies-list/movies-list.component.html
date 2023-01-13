@@ -1,0 +1,41 @@
+<div class="divTable">
+  <h2>List movies</h2>
+  <table class="table table-striped table-hover table-bordered">
+    <thead>
+      <tr class="bg-light">
+        <th>Id</th>
+        <th [noWrap]="true">
+          Year<br>
+          <input type="number" [(ngModel)]="yearSearch" placeholder="Filter by year"/>
+          &nbsp;
+          <i class="fa fa-arrow-down fa-med" (click)="pesquisar()"></i>
+        </th>
+        <th>Title</th>
+        <th [noWrap]="true">
+          Winner?<br>
+          <select [(ngModel)]="winnerSelect" (change)="setWinner()">
+            <option [value]="-1" selected>Yes/No</option>
+            <option [value]="1">Yes</option>
+            <option [value]="0">No</option>
+          </select>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let win of winners">
+        <td style="width: 10%;">{{ win.id }}</td>
+        <td style="width: 10%;">{{ win.year }}</td>
+        <td>{{ win.title }}</td>
+        <td>{{ win.winner ? 'Yes' : 'No' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="text-align: center;">
+    <app-movies-paginate
+      [paginaAtual]="paginaAtual"
+      [tamanhoPagina]="tamanhoPagina"
+      [totalPaginas]="totalPaginas"
+      (listaPaginada)="paginar($event)"
+    ></app-movies-paginate>
+  </div>
+</div>
